@@ -1,27 +1,20 @@
 [
   { "title": "이섭의 연애", "link": "https://m.comic.naver.com/webtoon/list?titleId=813454", "author": ["248", "김언희"], "tags": ["로맨스", "오피스", "네이버"] },
   { "title": "헬스×로맨스", "link": "https://m.comic.naver.com/webtoon/list?titleId=822876", "author": ["인미"], "tags": ["로맨스", "헬스", "네이버"] },
-
   { "title": "판타지 여동생!", "link": "https://m.comic.naver.com/webtoon/list?titleId=730425", "author": ["유누"], "tags": ["판타지", "게임", "네이버"] },
   { "title": "시월드 판타지", "link": "https://m.comic.naver.com/webtoon/list?titleId=753222", "author": ["진돌", "히디"], "tags": ["판타지", "가족", "네이버"] },
-
   { "title": "일상.", "link": "https://m.comic.naver.com/challenge/list?titleId=824015", "author": ["떫감"], "tags": ["일상", "에피소드", "네이버"] },
   { "title": "일상과 망상", "link": "https://m.comic.naver.com/bestChallenge/list?titleId=791651", "author": ["닭달이"], "tags": ["일상", "개그", "네이버"] },
-
   { "title": "축구천재로 오해받는 중입니다", "link": "https://m.comic.naver.com/webtoon/list?titleId=835119", "author": ["이보테", "한명현"], "tags": ["스포츠", "축구", "네이버"] },
   { "title": "티키타카", "link": "https://m.comic.naver.com/webtoon/list?titleId=833244", "author": ["하하영", "애크쵸"], "tags": ["스포츠", "풋살", "네이버"] },
-
   { "title": "K학원 생존기", "link": "https://m.comic.naver.com/webtoon/list?titleId=823190", "author": ["양아최"], "tags": ["학원", "일상", "네이버"] },
   { "title": "세기말 풋사과 보습학원", "link": "https://m.comic.naver.com/webtoon/list?titleId=761722", "author": ["순끼"], "tags": ["학원", "로맨스", "네이버"] },
-
   { "title": "비밀 레시피를 지켜라", "link": "https://m.comic.naver.com/bestChallenge/genre?genre=COMIC&page=7&sort=UPDATE", "author": ["단백질"], "tags": ["코미디", "로맨스", "네이버"] },
-  { "title": "뽀에그", "link": "https://comic.naver.com/webtoon/list?titleId=796839", "author": ["뽀에그"], "tags": ["코미디", "네이버"] }
-
+  { "title": "뽀에그", "link": "https://comic.naver.com/webtoon/list?titleId=796839", "author": ["뽀에그"], "tags": ["코미디", "네이버"] },
   { "title": "촉법소년", "link": "https://comic.naver.com/webtoon/list?titleId=808198", "author": ["박만사", "남자의 이야기", "정종택"],"tags": ["스릴러", "액션", "복수", "네이버"] },
-  { "title": "연애혁명", "link": "https://m.comic.naver.com/webtoon/list?titleId=570503", "author": ["232"], "tags": ["로맨스", "개그", "학원", "네이버"] }
-  { "title": "인생존망", "link": "https://comic.naver.com/webtoon/list?titleId=820354", "author": ["박만사", "땅콩", "전선욱"], "tags": ["드라마", "사이다", "학원", "액션", "네이버"] }
-  { "title": "너나 나나", "link": "https://comic.naver.com/webtoon/list?titleId=809056&week=sat", "author": ["김연우"], "tags": ["드라마", "우정", "학원", "네이버"] }
-  { "title": "별이삼샵", "link": "https://comic.naver.com/webtoon/list?titleId=737628", "author": ["혀노"], "tags": ["드라마", "로맨스", "코미디", "우정", "미녀", "네이버"] }
-  
-  { "title": "토끼와 흑표범의 공생관계", "link": "https://page.kakao.com/content/57095432", "author": ["목인,사담,야식먹는중"], "tags": ["로맨스", "판타지", "카카오"] }
+  { "title": "연애혁명", "link": "https://m.comic.naver.com/webtoon/list?titleId=570503", "author": ["232"], "tags": ["로맨스", "개그", "학원", "네이버"] },
+  { "title": "인생존망", "link": "https://comic.naver.com/webtoon/list?titleId=820354", "author": ["박만사", "땅콩", "전선욱"], "tags": ["드라마", "사이다", "학원", "액션", "네이버"] },
+  { "title": "너나 나나", "link": "https://comic.naver.com/webtoon/list?titleId=809056&week=sat", "author": ["김연우"], "tags": ["드라마", "우정", "학원", "네이버"] },
+  { "title": "별이삼샵", "link": "https://comic.naver.com/webtoon/list?titleId=737628", "author": ["혀노"], "tags": ["드라마", "로맨스", "코미디", "우정", "미녀", "네이버"] },
+  { "title": "토끼와 흑표범의 공생관계", "link": "https://page.kakao.com/content/57095432", "author": ["목인", "사담", "야식먹는중"], "tags": ["로맨스", "판타지", "카카오"] }
 ]
