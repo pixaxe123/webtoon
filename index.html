@@ -13,8 +13,9 @@
   .autocomplete div { padding: 5px; cursor: pointer; }
   .autocomplete div:hover { background: #eee; }
   .tags-container { text-align: center; margin-bottom: 15px; }
-  .tag { display: inline-block; background: #ddd; padding: 5px 10px; margin: 3px; border-radius: 15px; cursor: pointer; }
+  .tag { display: inline-block; background: #ddd; padding: 5px 10px; margin: 3px; border-radius: 15px; cursor: pointer; transition: 0.2s; }
   .tag:hover { background: #bbb; }
+  .tag.selected { background: #3498db; color: white; }
   .webtoon-list { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
   .webtoon-card { background: white; padding: 15px; width: 220px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
   .webtoon-card h3 { margin: 0 0 10px; font-size: 18px; }
@@ -29,7 +30,7 @@
 <h1>웹툰 추천</h1>
 
 <div class="search-bar">
-  <input type="text" id="searchInput" placeholder="태그 또는 작가 검색..." oninput="showSuggestions()">
+  <input type="text" id="searchInput" placeholder="태그 또는 작가 검색..." oninput="showSuggestions(); applyFilters();">
   <div class="autocomplete" id="autocompleteBox"></div>
 </div>
 
@@ -40,6 +41,7 @@
 <script>
 let webtoons = [];
 let allTags = [];
+let selectedTags = [];
 
 // 데이터 불러오기
 fetch('webtoons.json')
@@ -59,37 +61,58 @@ function displayWebtoons(list) {
     card.className = 'webtoon-card';
     card.innerHTML = `
       <h3><a href="${w.link}" target="_blank">${w.title}</a></h3>
-      <div class="author" onclick="filterByAuthor('${w.author}')">${w.author}</div>
+      <div class="author" onclick="selectAuthor('${w.author}')">${w.author}</div>
       <div class="card-tags">
-        ${w.tags.map(t => `<span class="tag" onclick="filterByTag('${t}')">${t}</span>`).join('')}
+        ${w.tags.map(t => `<span class="tag" onclick="toggleTag('${t}')">${t}</span>`).join('')}
       </div>
     `;
     container.appendChild(card);
   });
 }
 
-function filterByTag(tag) {
-  const filtered = webtoons.filter(w => w.tags.includes(tag));
-  displayWebtoons(filtered);
-  document.getElementById('searchInput').value = tag;
-  document.getElementById('autocompleteBox').innerHTML = '';
+function toggleTag(tag) {
+  if (selectedTags.includes(tag)) {
+    selectedTags = selectedTags.filter(t => t !== tag);
+  } else {
+    selectedTags.push(tag);
+  }
+  updateTagSelectionUI();
+  applyFilters();
 }
 
-function filterByAuthor(author) {
-  const filtered = webtoons.filter(w => w.author === author);
-  displayWebtoons(filtered);
+function updateTagSelectionUI() {
+  document.querySelectorAll('.tag').forEach(el => {
+    if (selectedTags.includes(el.textContent)) {
+      el.classList.add('selected');
+    } else {
+      el.classList.remove('selected');
+    }
+  });
+}
+
+function selectAuthor(author) {
+  selectedTags = [author];
   document.getElementById('searchInput').value = author;
-  document.getElementById('autocompleteBox').innerHTML = '';
+  updateTagSelectionUI();
+  applyFilters();
 }
 
-function filterBySearch(keyword) {
-  keyword = keyword.toLowerCase();
-  const filtered = webtoons.filter(w => 
-    w.tags.some(tag => tag.toLowerCase().includes(keyword)) ||
-    w.author.toLowerCase().includes(keyword) ||
-    w.title.toLowerCase().includes(keyword)
-  );
+function applyFilters() {
+  const keyword = document.getElementById('searchInput').value.toLowerCase();
+  const filtered = webtoons.filter(w => {
+    const matchesKeyword =
+      !keyword ||
+      w.tags.some(tag => tag.toLowerCase().includes(keyword)) ||
+      w.author.toLowerCase().includes(keyword) ||
+      w.title.toLowerCase().includes(keyword);
+
+    const matchesTags =
+      selectedTags.length === 0 || selectedTags.every(t => w.tags.includes(t) || w.author === t || w.title === t);
+
+    return matchesKeyword && matchesTags;
+  });
   displayWebtoons(filtered);
+  updateTagSelectionUI();
 }
 
 function showSuggestions() {
@@ -104,7 +127,9 @@ function showSuggestions() {
     div.textContent = s;
     div.onclick = () => {
       document.getElementById('searchInput').value = s;
-      filterBySearch(s);
+      if (!selectedTags.includes(s)) selectedTags.push(s);
+      updateTagSelectionUI();
+      applyFilters();
       box.innerHTML = '';
     };
     box.appendChild(div);
@@ -113,9 +138,9 @@ function showSuggestions() {
 
 function showRandomTags() {
   const randomTags = [...new Set(webtoons.flatMap(w => w.tags))]
-    .sort(() => 0.5 - Math.random()).slice(0, 5);
+    .sort(() => 0.5 - Math.random()).slice(0, 8);
   document.getElementById('randomTags').innerHTML = randomTags
-    .map(tag => `<span class="tag" onclick="filterByTag('${tag}')">${tag}</span>`).join('');
+    .map(tag => `<span class="tag" onclick="toggleTag('${tag}')">${tag}</span>`).join('');
 }
 </script>
 
