@@ -1,0 +1,6 @@
+[
+  { "title": "별이삼샵", "link": "https://example.com/byeolsam", "author": "홍길동", "tags": ["별이삼샵", "로맨스", "감성"] },
+  { "title": "달의 이야기", "link": "https://example.com/moon", "author": "이몽룡", "tags": ["별이삼샵과 닮은 그림체", "판타지", "모험"] },
+  { "title": "사랑의 계절", "link": "https://example.com/love", "author": "홍길동", "tags": ["로맨스", "감성", "별이삼샵 작가의 작품"] },
+  { "title": "시간의 숲", "link": "https://example.com/time", "author": "성춘향", "tags": ["판타지", "모험"] }
+]
