@@ -1,19 +1,19 @@
 [
-  { "title": "이섭의 연애", "link": "https://m.comic.naver.com/webtoon/list?titleId=813454", "author": "248 / 김언희", "tags": ["로맨스", "오피스"] },
-  { "title": "헬스×로맨스", "link": "https://m.comic.naver.com/webtoon/list?titleId=822876", "author": "인미", "tags": ["로맨스", "헬스"] },
+  { "title": "이섭의 연애", "link": "https://m.comic.naver.com/webtoon/list?titleId=813454", "author": ["248", "김언희"], "tags": ["로맨스", "오피스", "네이버"] },
+  { "title": "헬스×로맨스", "link": "https://m.comic.naver.com/webtoon/list?titleId=822876", "author": ["인미"], "tags": ["로맨스", "헬스", "네이버"] },
 
-  { "title": "판타지 여동생!", "link": "https://m.comic.naver.com/webtoon/list?titleId=730425", "author": "유누", "tags": ["판타지", "게임"] },
-  { "title": "시월드 판타지", "link": "https://m.comic.naver.com/webtoon/list?titleId=753222", "author": "진돌 / 히디", "tags": ["판타지", "가족"] },
+  { "title": "판타지 여동생!", "link": "https://m.comic.naver.com/webtoon/list?titleId=730425", "author": ["유누"], "tags": ["판타지", "게임", "네이버"] },
+  { "title": "시월드 판타지", "link": "https://m.comic.naver.com/webtoon/list?titleId=753222", "author": ["진돌", "히디"], "tags": ["판타지", "가족", "네이버"] },
 
-  { "title": "일상.", "link": "https://m.comic.naver.com/challenge/list?titleId=824015", "author": "떫감", "tags": ["일상", "에피소드"] },
-  { "title": "일상과 망상", "link": "https://m.comic.naver.com/bestChallenge/list?titleId=791651", "author": "닭달이", "tags": ["일상", "개그"] },
+  { "title": "일상.", "link": "https://m.comic.naver.com/challenge/list?titleId=824015", "author": ["떫감"], "tags": ["일상", "에피소드", "네이버"] },
+  { "title": "일상과 망상", "link": "https://m.comic.naver.com/bestChallenge/list?titleId=791651", "author": ["닭달이"], "tags": ["일상", "개그", "네이버"] },
 
-  { "title": "축구천재로 오해받는 중입니다", "link": "https://m.comic.naver.com/webtoon/list?titleId=835119", "author": "이보테 / 한명현", "tags": ["스포츠", "축구"] },
-  { "title": "티키타카", "link": "https://m.comic.naver.com/webtoon/list?titleId=833244", "author": "하하영 / 애크쵸", "tags": ["스포츠", "풋살"] },
+  { "title": "축구천재로 오해받는 중입니다", "link": "https://m.comic.naver.com/webtoon/list?titleId=835119", "author": ["이보테", "한명현"], "tags": ["스포츠", "축구", "네이버"] },
+  { "title": "티키타카", "link": "https://m.comic.naver.com/webtoon/list?titleId=833244", "author": ["하하영", "애크쵸"], "tags": ["스포츠", "풋살", "네이버"] },
 
-  { "title": "K학원 생존기", "link": "https://m.comic.naver.com/webtoon/list?titleId=823190", "author": "양아최", "tags": ["학원", "일상"] },
-  { "title": "세기말 풋사과 보습학원", "link": "https://m.comic.naver.com/webtoon/list?titleId=761722", "author": "순끼", "tags": ["학원", "로맨스"] },
+  { "title": "K학원 생존기", "link": "https://m.comic.naver.com/webtoon/list?titleId=823190", "author": ["양아최"], "tags": ["학원", "일상", "네이버"] },
+  { "title": "세기말 풋사과 보습학원", "link": "https://m.comic.naver.com/webtoon/list?titleId=761722", "author": ["순끼"], "tags": ["학원", "로맨스", "네이버"] },
 
-  { "title": "비밀 레시피를 지켜라", "link": "https://m.comic.naver.com/bestChallenge/genre?genre=COMIC&page=7&sort=UPDATE", "author": "단백질", "tags": ["코미디", "로맨스"] },
-  { "title": "뽀에그", "link": "https://comic.naver.com/webtoon/list?titleId=796839", "author": "뽀에그", "tags": ["코미디"] }
+  { "title": "비밀 레시피를 지켜라", "link": "https://m.comic.naver.com/bestChallenge/genre?genre=COMIC&page=7&sort=UPDATE", "author": ["단백질"], "tags": ["코미디", "로맨스", "네이버"] },
+  { "title": "뽀에그", "link": "https://comic.naver.com/webtoon/list?titleId=796839", "author": ["뽀에그"], "tags": ["코미디", "네이버"] }
 ]
