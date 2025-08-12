@@ -16,6 +16,9 @@
   .tag { display: inline-block; background: #ddd; padding: 5px 10px; margin: 3px; border-radius: 15px; cursor: pointer; transition: 0.2s; }
   .tag:hover { background: #bbb; }
   .tag.selected { background: #3498db; color: white; }
+  .selected-tags-container { text-align: center; margin-bottom: 10px; }
+  .selected-tag { display: inline-flex; align-items: center; background: #3498db; color: white; padding: 5px 10px; margin: 3px; border-radius: 15px; }
+  .remove-tag { margin-left: 5px; cursor: pointer; font-weight: bold; }
   .webtoon-list { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
   .webtoon-card { background: white; padding: 15px; width: 220px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
   .webtoon-card h3 { margin: 0 0 10px; font-size: 18px; }
@@ -34,6 +37,10 @@
   <div class="autocomplete" id="autocompleteBox"></div>
 </div>
 
+<!-- 선택된 태그 표시 -->
+<div class="selected-tags-container" id="selectedTags"></div>
+
+<!-- 랜덤 태그 -->
 <div class="tags-container" id="randomTags"></div>
 
 <div class="webtoon-list" id="webtoonList"></div>
@@ -81,6 +88,7 @@ function toggleTag(tag) {
 }
 
 function updateTagSelectionUI() {
+  // 태그 버튼 색상 변경
   document.querySelectorAll('.tag').forEach(el => {
     if (selectedTags.includes(el.textContent)) {
       el.classList.add('selected');
@@ -88,10 +96,24 @@ function updateTagSelectionUI() {
       el.classList.remove('selected');
     }
   });
+
+  // 선택된 태그 목록 표시
+  const selectedContainer = document.getElementById('selectedTags');
+  selectedContainer.innerHTML = selectedTags
+    .map(tag => `<span class="selected-tag">${tag} <span class="remove-tag" onclick="removeTag('${tag}')">×</span></span>`)
+    .join('');
+}
+
+function removeTag(tag) {
+  selectedTags = selectedTags.filter(t => t !== tag);
+  updateTagSelectionUI();
+  applyFilters();
 }
 
 function selectAuthor(author) {
-  selectedTags = [author];
+  if (!selectedTags.includes(author)) {
+    selectedTags.push(author);
+  }
   document.getElementById('searchInput').value = author;
   updateTagSelectionUI();
   applyFilters();
