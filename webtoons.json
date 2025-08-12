@@ -16,4 +16,7 @@
 
   { "title": "비밀 레시피를 지켜라", "link": "https://m.comic.naver.com/bestChallenge/genre?genre=COMIC&page=7&sort=UPDATE", "author": ["단백질"], "tags": ["코미디", "로맨스", "네이버"] },
   { "title": "뽀에그", "link": "https://comic.naver.com/webtoon/list?titleId=796839", "author": ["뽀에그"], "tags": ["코미디", "네이버"] }
+
+  { "title": "촉법소년", "link": "https://comic.naver.com/webtoon/list?titleId=808198", "author": ["박만사", "남자의 이야기", "정종택"],"tags": ["스릴러", "액션", "복수"] },
+  { "title": "연애혁명", "link": "https://m.comic.naver.com/webtoon/list?titleId=570503", "author": ["232"], "tags": ["로맨스", "개그", "학원"] }
 ]
